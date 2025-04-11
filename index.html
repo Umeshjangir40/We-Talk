@@ -4,27 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>We Talk</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <div class="container">
-    <h1>We Talk: Talk Like Nobody's Watching</h1>
+    <h1>We Talk</h1>
+    <p class="tagline">Talk Like Nobody's Watching</p>
+
     <div id="gender-select">
-      <label>Choose Gender:</label>
+      <label for="gender">Select Your Gender:</label>
       <select id="gender">
-        <option value="any">Any</option>
         <option value="male">Male</option>
         <option value="female">Female</option>
       </select>
       <button onclick="startChat()">Start Chat</button>
     </div>
+
     <div id="chat-container" class="hidden">
       <div id="chat-box"></div>
-      <input type="text" id="message" placeholder="Type your message..." />
+      <input type="text" id="messageInput" placeholder="Type your message..." />
       <button onclick="sendMessage()">Send</button>
-      <button onclick="disconnect()">Disconnect</button>
     </div>
   </div>
+
   <script src="/socket.io/socket.io.js"></script>
   <script src="script.js"></script>
 </body>
